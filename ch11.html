@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1f">
 <title>詩歌與教會的使命｜無盡的歌 Chapter 11</title>
 <style>img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
@@ -126,6 +128,51 @@
   @media (max-width:64em){.mark .st{position:static}}
   .leg .ul,.leg .wv,.leg .bx{color:var(--ink)}
 
+  /* ===== phone layout ===== */
+  html{-webkit-text-size-adjust:100%}
+  body{overflow-wrap:anywhere}
+  .theme{min-height:32px;padding-inline:12px 10px}
+  @media (max-width:700px){
+    .epigraph{writing-mode:horizontal-tb;height:auto;line-height:2;max-width:26em;margin-inline-start:0}
+    .epigraph cite{display:block;text-align:right;margin-block-start:.2em}
+  }
+  @media (max-width:560px){
+    body{font-size:16px;line-height:1.95;padding-block:0 64px}
+    .runhead{padding-block:8px}
+    .opener{padding-block:36px 28px;margin-bottom:28px}
+    .opener .chap b{font-size:28px}
+    .opener .entitle{margin-bottom:24px;line-height:1.1}
+    .legend{gap:6px 16px;padding:10px 12px;margin-bottom:28px;font-size:12px}
+    h2{font-size:22px;margin:52px 0 14px}
+    h3{font-size:18px;margin:36px 0 8px}
+    h4{margin:20px 0 4px}
+    p{text-indent:1.5em}
+    .verse{margin:20px 0 20px 1em;line-height:2}
+    .pull{margin:24px 0}
+    .rest{margin:14px 0;font-size:20px}
+    .hymn{padding:16px 14px;margin:28px 0}
+    .hymn .t{font-size:16px}
+    .hymn .t .en{font-size:17px}
+    .hymn ol{padding-left:1.4em}
+    ul.terms{margin-left:1em;gap:0 1.5em}
+    ul.dots{padding-left:1.2em}
+    ol.q{padding-left:1.6em}
+    ol.toc{columns:1;margin-left:1em}
+    dl.roles{margin-left:1em}
+    .stages{margin-left:.2em;padding-left:1.4em}
+    .survey h3{margin-top:40px}
+    ol.qq{margin-left:0}
+    ol.qq>li{padding-left:2.2em}
+    ol.qq ul{padding-left:.2em}
+    .fn{font-size:12px}
+    .prayer{margin-top:36px;padding-top:20px}
+    .prayer .staff{font-size:16px}
+    .prayer p{line-height:2}
+  }
+  @media (max-width:360px){
+    body{font-size:15px}
+    .opener h1{letter-spacing:.03em}
+  }
 </style>
 </head>
 <body>

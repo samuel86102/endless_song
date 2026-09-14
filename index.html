@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1f">
 <title>無盡的歌｜目錄</title>
 <style>img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
@@ -67,6 +69,25 @@
   @media (max-width:560px){.card{grid-template-columns:1fr;gap:6px}.card .no b{display:inline;font-size:28px;margin-left:8px;vertical-align:-2px}.card .go{display:none}}
   @media (prefers-reduced-motion:reduce){.card .go{transition:none}}
   footer{border-top:1px solid var(--rule);padding-block:20px 60px;font-size:13px;color:var(--ink-3);font-family:var(--sans);letter-spacing:.04em}
+  /* ===== phone layout ===== */
+  html{-webkit-text-size-adjust:100%}
+  body{overflow-wrap:anywhere}
+  .theme{min-height:32px;padding-inline:12px 10px}
+  @media (max-width:560px){
+    body{font-size:16px;line-height:1.9;padding-block:0 48px}
+    .hero{padding-block:40px 28px}
+    .hero h1{letter-spacing:.08em}
+    .hero .en{margin-bottom:12px}
+    .hero p.lead{font-size:14px;line-height:1.9}
+    .toc{padding-block:8px 48px}
+    .card{padding:22px 0}
+    .card .no{font-size:12px;padding-top:0}
+    .card h2{font-size:19px}
+    .card .en{font-size:17px;margin-bottom:8px}
+    .card .secs{font-size:13px}
+    .card .meta{font-size:12px;flex-direction:column;gap:2px}
+    footer{padding-block:16px 40px;font-size:12px}
+  }
 </style>
 </head>
 <body>
