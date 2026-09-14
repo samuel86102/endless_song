@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>無盡的歌｜目錄</title>
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+  :root{
+    --paper:#faf9f5; --paper-2:#f1efe8; --ink:#25262b; --ink-2:#5b5c63; --ink-3:#8f9099;
+    --rule:#dcdad2; --pen:#2d52c8; --pen-soft:rgba(45,82,200,.16); --accent:#6b5d3f;
+    --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+    --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    --latin:"Cormorant Garamond","Georgia",serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#1b1b1f; --paper-2:#232329; --ink:#e6e4dc; --ink-2:#aeacA4; --ink-3:#7c7b80;
+      --rule:#35353c; --pen:#7c98ff; --pen-soft:rgba(124,152,255,.2); --accent:#c9b98a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#1b1b1f; --paper-2:#232329; --ink:#e6e4dc; --ink-2:#aeaca4; --ink-3:#7c7b80;
+    --rule:#35353c; --pen:#7c98ff; --pen-soft:rgba(124,152,255,.2); --accent:#c9b98a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:2;padding-inline:16px;padding-block:0 96px;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+
+  /* running head, like the book's page header */
+  .runhead{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;margin-inline:-16px;padding-inline:16px;font-size:12px;color:var(--ink-3);letter-spacing:.08em}
+  .runhead .zh{font-family:var(--sans);font-weight:500}
+  .runhead .en{font-family:var(--latin);font-size:14px;letter-spacing:.02em;font-style:italic}
+  .runhead .right{display:flex;align-items:center;gap:14px}
+  .theme{font:inherit;font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--rule);border-radius:999px;padding:4px 10px 4px 8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1.4}
+  .theme:hover{color:var(--ink);border-color:var(--ink-3)}
+  .theme:focus-visible{outline:2px solid var(--pen);outline-offset:2px}
+  .theme .ico::before{content:"☾"}
+  :root.is-dark .theme .ico::before{content:"☀"}
+  .theme .lbl::before{content:"深色"}
+  :root.is-dark .theme .lbl::before{content:"淺色"}
+  @media (max-width:480px){.runhead .right .zh{display:none}}
+
+
+  .wrap{max-width:44em;margin:0 auto}
+  .hero{padding-block:80px 48px;border-bottom:1px solid var(--rule)}
+  .hero .k{font-family:var(--latin);color:var(--ink-3);font-size:15px;letter-spacing:.2em;text-transform:uppercase}
+  .hero h1{font-family:var(--sans);font-weight:500;font-size:clamp(34px,7vw,52px);letter-spacing:.12em;margin:6px 0 0;line-height:1.3}
+  .hero .en{font-family:var(--latin);font-size:clamp(28px,6vw,44px);font-style:italic;margin:0 0 18px;line-height:1.1;color:var(--ink-2)}
+  .hero p.lead{margin:0;color:var(--ink-2);font-size:15px;text-indent:0;max-width:34em}
+  .toc{display:flex;flex-direction:column;gap:0;padding-block:24px 96px}
+  .card{display:grid;grid-template-columns:6.5em 1fr auto;gap:0 20px;align-items:start;padding:32px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;position:relative}
+  .card:first-child{border-top:0}
+  .card .no{font-family:var(--latin);color:var(--ink-3);letter-spacing:.2em;text-transform:uppercase;font-size:13px;line-height:1.2;padding-top:6px}
+  .card .no b{display:block;font-size:52px;font-weight:400;letter-spacing:0;color:var(--ink);line-height:1;margin-top:4px}
+  .card h2{font-family:var(--sans);font-weight:700;font-size:22px;letter-spacing:.04em;margin:0;line-height:1.5;text-wrap:balance}
+  .card .en{font-family:var(--latin);font-size:19px;font-style:italic;color:var(--ink-2);margin:2px 0 12px;text-indent:0;line-height:1.3}
+  .card .secs{list-style:none;padding:0;margin:0 0 10px;display:flex;flex-wrap:wrap;gap:4px 0;font-size:14px;color:var(--ink-2);line-height:1.6}
+  .card .secs li+li::before{content:"／";color:var(--ink-3);margin-inline:.4em}
+  .card .meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;margin:0;text-indent:0;font-size:13px;color:var(--ink-3);letter-spacing:.04em}
+  .card .meta span:last-child{font-family:var(--latin);font-size:14px;letter-spacing:.06em}
+  .card .go{font-family:var(--latin);font-size:26px;color:var(--ink-3);padding-top:10px;transition:transform .15s,color .15s}
+  .card:hover h2{text-decoration:underline;text-decoration-color:var(--pen);text-decoration-thickness:2px;text-underline-offset:6px}
+  .card:hover .go{color:var(--pen);transform:translateX(4px)}
+  .card:focus-visible{outline:2px solid var(--pen);outline-offset:6px;border-radius:2px}
+  @media (max-width:560px){.card{grid-template-columns:1fr;gap:6px}.card .no b{display:inline;font-size:28px;margin-left:8px;vertical-align:-2px}.card .go{display:none}}
+  @media (prefers-reduced-motion:reduce){.card .go{transition:none}}
+  footer{border-top:1px solid var(--rule);padding-block:20px 60px;font-size:13px;color:var(--ink-3);font-family:var(--sans);letter-spacing:.04em}
+</style>
+</head>
+<body>
+<header class="runhead">
+  <span class="zh">無盡的歌 <span class="en">The Endless Song</span></span>
+  <span class="right"><span class="zh">目錄</span>
+  <button id="themeToggle" class="theme" type="button" aria-label="切換深淺色模式"><span class="ico"></span><span class="lbl"></span></button></span>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <div class="k">Contents</div>
+  <h1>無盡的歌</h1>
+  <p class="en">The Endless Song</p>
+  <p class="lead">第十一至十三章的重排版本。內文依原書格式排列，讀書時用藍筆畫下的重點也一併標出；每章頁首可切換深淺色模式。</p>
+</section>
+
+<nav class="toc" aria-label="章節">
+  <a class="card" href="ch11.html">
+    <div class="no"><span class="k">Chapter</span><b>11</b></div>
+    <div class="body">
+      <h2>詩歌與教會的使命</h2>
+      <p class="en">The Song and the Church's Mission</p>
+      <ul class="secs"><li>神的教會</li><li>教會的使命</li><li>音樂與教會的使命</li><li>成人詩班</li><li>分級詩班</li><li>綜論</li></ul>
+      <p class="meta"><span>𝄞 求主賜當說的話 · 為世界頌主歌</span><span>pp. 207–224</span></p>
+    </div>
+    <span class="go" aria-hidden="true">→</span>
+  </a>
+  <a class="card" href="ch12.html">
+    <div class="no"><span class="k">Chapter</span><b>12</b></div>
+    <div class="body">
+      <h2>詩歌的禱告——「求主教導我們敬拜！」</h2>
+      <p class="en">The Song's Prayer: "Lord, teach us to worship!"</p>
+      <ul class="secs"><li>敬拜的重要性</li><li>敬拜的定義</li><li>新約聖經敬拜的原則</li><li>敬拜的形式</li><li>崇拜的更新</li><li>給帶領崇拜者的建議</li><li>綜論</li></ul>
+      <p class="meta"><span>𝄞 生命靈氣吹進我心 · 齊集主前</span><span>pp. 225–244</span></p>
+    </div>
+    <span class="go" aria-hidden="true">→</span>
+  </a>
+  <a class="card" href="ch13.html">
+    <div class="no"><span class="k">Chapter</span><b>13</b></div>
+    <div class="body">
+      <h2>更美的詩歌——評估與設定目標</h2>
+      <p class="en">The Song Improved: evaluating and setting goals</p>
+      <ul class="secs"><li>不斷地求進步</li><li>進步的基本要素</li><li>精進的十大項目</li><li>綜論</li></ul>
+      <p class="meta"><span>𝄞 基督精兵</span><span>pp. 245–261</span></p>
+    </div>
+    <span class="go" aria-hidden="true">→</span>
+  </a>
+</nav>
+</main>
+<footer class="wrap">共 3 章 · pp. 207–261</footer>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeToggle');
+  function sysDark(){return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches}
+  function current(){var t=root.getAttribute('data-theme');return t||(sysDark()?'dark':'light')}
+  function apply(t){root.setAttribute('data-theme',t);root.classList.toggle('is-dark',t==='dark')}
+  var saved=null;try{saved=localStorage.getItem('endless-song-theme')}catch(e){}
+  if(saved==='dark'||saved==='light'){apply(saved)}else{root.classList.toggle('is-dark',current()==='dark')}
+  btn.addEventListener('click',function(){var t=current()==='dark'?'light':'dark';apply(t);try{localStorage.setItem('endless-song-theme',t)}catch(e){}});
+  if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(!root.getAttribute('data-theme'))root.classList.toggle('is-dark',sysDark())})}
+})();
+</script>
+</body>
+</html>

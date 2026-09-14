@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>詩歌與教會的使命｜無盡的歌 Chapter 11</title>
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+  :root{
+    --paper:#faf9f5; --paper-2:#f1efe8; --ink:#25262b; --ink-2:#5b5c63; --ink-3:#8f9099;
+    --rule:#dcdad2; --pen:#2d52c8; --pen-soft:rgba(45,82,200,.16); --accent:#6b5d3f;
+    --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+    --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    --latin:"Cormorant Garamond","Georgia",serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#1b1b1f; --paper-2:#232329; --ink:#e6e4dc; --ink-2:#aeacA4; --ink-3:#7c7b80;
+      --rule:#35353c; --pen:#7c98ff; --pen-soft:rgba(124,152,255,.2); --accent:#c9b98a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#1b1b1f; --paper-2:#232329; --ink:#e6e4dc; --ink-2:#aeaca4; --ink-3:#7c7b80;
+    --rule:#35353c; --pen:#7c98ff; --pen-soft:rgba(124,152,255,.2); --accent:#c9b98a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:2;padding-inline:16px;padding-block:0 96px;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+
+  /* running head, like the book's page header */
+  .runhead{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;margin-inline:-16px;padding-inline:16px;font-size:12px;color:var(--ink-3);letter-spacing:.08em}
+  .runhead .zh{font-family:var(--sans);font-weight:500}
+  .runhead a.home{text-decoration:none}
+  .runhead a.home:hover{color:var(--ink)}
+  .runhead .sep{margin-inline:4px}
+  @media (max-width:480px){.runhead .home .en,.runhead .sep{display:none}}
+  .runhead .en{font-family:var(--latin);font-size:14px;letter-spacing:.02em;font-style:italic}
+  .runhead .right{display:flex;align-items:center;gap:14px}
+  .theme{font:inherit;font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--rule);border-radius:999px;padding:4px 10px 4px 8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1.4}
+  .theme:hover{color:var(--ink);border-color:var(--ink-3)}
+  .theme:focus-visible{outline:2px solid var(--pen);outline-offset:2px}
+  .theme .ico::before{content:"☾"}
+  :root.is-dark .theme .ico::before{content:"☀"}
+  .theme .lbl::before{content:"深色"}
+  :root.is-dark .theme .lbl::before{content:"淺色"}
+  @media (max-width:480px){.runhead .right .zh{display:none}}
+
+  .book{max-width:38em;margin:0 auto;position:relative}
+
+  /* chapter opener */
+  .opener{padding-block:72px 48px;border-bottom:1px solid var(--rule);margin-bottom:40px}
+  .opener .chap{font-family:var(--latin);color:var(--ink-3);font-size:15px;letter-spacing:.2em;text-transform:uppercase}
+  .opener .chap b{font-size:34px;letter-spacing:0;font-weight:400;color:var(--ink);margin-left:6px;vertical-align:-3px}
+  .opener h1{font-family:var(--sans);font-weight:500;font-size:clamp(28px,6vw,40px);letter-spacing:.06em;margin:8px 0 6px;line-height:1.4;text-wrap:balance}
+  .opener .entitle{font-family:var(--latin);font-weight:400;font-size:clamp(30px,7.5vw,54px);line-height:1.05;margin:0 0 40px;letter-spacing:-.01em;text-wrap:balance}
+  .opener .entitle small{font-size:.5em;font-style:italic;margin-inline:.15em}
+  .epigraph{writing-mode:vertical-rl;margin-inline-start:auto;font-size:16px;line-height:2.4;height:15em;color:var(--ink-2);letter-spacing:.08em}
+  .epigraph b{color:var(--ink);font-weight:600}
+  .epigraph cite{font-style:normal;font-size:13px;color:var(--ink-3);margin-block-start:1.2em}
+  @media (max-width:480px){.epigraph{writing-mode:horizontal-tb;height:auto;line-height:2}.epigraph cite{display:block;text-align:right}}
+
+  /* legend for the reader's pen marks */
+  .legend{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;font-size:13px;color:var(--ink-2);font-family:var(--sans);margin:0 0 40px;padding:12px 16px;background:var(--paper-2);border-radius:4px}
+  .legend .k{color:var(--ink-3);letter-spacing:.1em;margin-right:4px}
+
+  /* headings, matching the book's three levels */
+  h2{font-family:var(--sans);font-weight:700;font-size:26px;letter-spacing:.06em;margin:72px 0 20px;line-height:1.4}
+  h3{font-family:var(--sans);font-weight:700;font-size:19px;letter-spacing:.04em;margin:44px 0 10px}
+  h4{font-family:var(--sans);font-weight:700;font-size:16px;margin:24px 0 4px}
+  h4 .l{font-family:var(--latin);font-weight:500;font-size:17px;margin-right:.3em}
+  p{margin:0 0 .6em;text-indent:2em}
+  p.noindent, .verse p, li p{text-indent:0}
+  strong{font-weight:700}
+  sup{font-size:.65em;font-family:var(--latin);vertical-align:.7em;line-height:0}
+
+  /* scripture & quotations: lighter weight, indented, like the book */
+  .verse{margin:28px 0 28px 2em;font-weight:300;color:var(--ink-2);letter-spacing:.05em;line-height:2.1}
+  .verse cite{display:block;text-align:right;font-style:normal;font-size:14px;color:var(--ink-3);margin-top:2px}
+  .verse cite::before{content:"—— "}
+  .pull{margin:32px 0;padding-left:1.2em;border-left:3px solid var(--accent);font-weight:400}
+  .pull p{text-indent:0}
+
+  /* section-rest ornament: the book uses an eighth rest between blocks */
+  .rest{display:block;text-align:center;color:var(--ink-3);font-size:22px;margin:22px 0;line-height:1;user-select:none}
+
+  /* hymn blocks */
+  .hymn{margin:36px 0;padding:20px 22px;border:1px solid var(--rule);border-radius:2px;background:var(--paper-2)}
+  .hymn .t{font-family:var(--sans);font-weight:700;font-size:17px;margin:0;text-indent:0;display:flex;flex-wrap:wrap;gap:0 10px;align-items:baseline}
+  .hymn .t .clef{font-size:30px;line-height:0;color:var(--accent);margin-right:2px;position:relative;top:4px}
+  .hymn .t .en{font-family:var(--latin);font-weight:500;font-size:19px}
+  .hymn .by{text-align:right;font-size:14px;color:var(--ink-3);margin:2px 0 14px;text-indent:0}
+  .hymn .lyr{margin:0;text-indent:0;font-weight:300;letter-spacing:.05em}
+  .hymn ol{margin:8px 0 0;padding-left:1.6em;font-weight:300;letter-spacing:.03em}
+  .hymn ol li{margin-bottom:.6em}
+  .hymn .ref{font-size:14px;color:var(--ink-3);margin:12px 0 0;text-indent:0}
+
+  ul.terms{list-style:none;padding:0;margin:16px 0 20px 2em;display:grid;grid-template-columns:repeat(auto-fit,minmax(9em,max-content));gap:0 3em;font-family:var(--sans);font-weight:500}
+  ul.terms li::before{content:"・";color:var(--ink-3)}
+  ul.dots{padding-left:1.4em;margin:12px 0}
+  ul.dots li{margin-bottom:.35em;padding-left:.2em}
+  ul.dots li::marker{color:var(--ink-3)}
+  ol.q{padding-left:1.8em;margin:12px 0}
+  ol.q li{margin-bottom:.5em}
+  ol.q li::marker{font-family:var(--latin);color:var(--ink-3)}
+
+  .fn{margin:36px 0 0;padding-top:12px;border-top:1px solid var(--rule);font-size:13px;line-height:1.8;color:var(--ink-2)}
+  .fn p{text-indent:0;margin:0 0 4px}
+  .fn i{font-family:var(--latin);font-size:15px}
+
+  .prayer{margin:48px 0 0;padding:28px 0 0;border-top:1px solid var(--rule)}
+  .prayer .staff{display:flex;align-items:center;gap:14px;font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:.3em;margin-bottom:22px}
+  .prayer .staff::before{content:"";flex:1;max-width:14em;height:11px;background:repeating-linear-gradient(to bottom,var(--ink-3) 0 1px,transparent 1px 3.5px)}
+  .prayer p{font-weight:300;letter-spacing:.06em;line-height:2.2}
+  .prayer p.amen{text-align:right;text-indent:0;margin-top:1em}
+
+  /* ===== reader's blue-pen marks ===== */
+  .ul{text-decoration:underline;text-decoration-color:var(--pen);text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-skip-ink:none}
+  .wv{text-decoration:underline wavy;text-decoration-color:var(--pen);text-decoration-thickness:1.5px;text-underline-offset:4px;text-decoration-skip-ink:none}
+  .bx{color:var(--ink);background:var(--pen-soft);border-radius:2px;padding:1px 2px;box-shadow:inset 1.5px 0 var(--pen),inset -1.5px 0 var(--pen)}
+  .bx.ul{text-decoration-thickness:1.5px}
+  .st{color:var(--pen);font-size:.85em;margin-inline:.1em;vertical-align:.1em}
+  .arrow{color:var(--pen);font-weight:700;margin-inline:.05em;font-family:var(--sans)}
+  .mark{position:relative}
+  .mark .st{position:absolute;right:calc(100% + 6px);top:0}
+  @media (max-width:64em){.mark .st{position:static}}
+  .leg .ul,.leg .wv,.leg .bx{color:var(--ink)}
+
+</style>
+</head>
+<body>
+<header class="runhead">
+  <a class="zh home" href="index.html">← 目錄 <span class="sep">·</span> 無盡的歌 <span class="en">The Endless Song</span></a>
+  <span class="right"><span class="zh">Chapter 11 · 詩歌與教會的使命</span>
+  <button id="themeToggle" class="theme" type="button" aria-label="切換深淺色模式"><span class="ico"></span><span class="lbl"></span></button></span>
+</header>
+
+<main class="book">
+
+<section class="opener">
+  <div class="chap">Chapter <b>11</b></div>
+  <h1>詩歌與教會的使命</h1>
+  <p class="entitle noindent">The <span style="font-size:1.35em">Song</span> <small>and the</small> Church's Mission</p>
+  <div class="epigraph">你是彼得，<b>我要把我的教會</b>建造在這磐石上，陰間的權柄不能勝過他。<cite>——馬太福音十六章18節</cite></div>
+</section>
+
+<div class="legend leg">
+  <span class="k">藍筆記號</span>
+  <span><span class="ul">底線</span></span>
+  <span><span class="wv">波浪線</span></span>
+  <span><span class="bx">括弧框起</span></span>
+  <span><span class="st">★</span> 旁註星號</span>
+</div>
+
+<h3 style="margin-top:0">發展出一套原則</h3>
+<p>音樂在教會事工上扮演什麼樣的角色呢？筆者嘗試在下面兩課，從教會事工的五個角度探討這個問題：</p>
+<ul class="terms"><li>崇拜</li><li>傳福音</li><li>基督教教育</li><li>團契</li><li>社會關懷</li></ul>
+<p>在最後一課「更美的詩歌」，會將本書討論過的資料、觀點與信念，提供給讀者一些可行的建議。設立與改進教會的音樂事工，實為每一位弟兄姊妹的職責。不論音樂恩賜如何，每個信徒都應該參與評估教會的音樂事工、設定音樂事工的長程計畫。神的事工需要我們將最好的全然擺上。</p>
+
+<h2>神的教會</h2>
+<p>神的教會可分成三個層面：<strong>個人、地方教會與普世教會</strong>。</p>
+
+<h3>個人</h3>
+<p><span class="ul">每位基督徒都是耶穌基督在地上的代表</span>。當信徒遇到他人有需要時（屬靈、身體、情緒、社交）要伸出援手，帶領他們到神面前，進入有愛心、以聖經為主的地方教會。</p>
+<div class="verse">……神的國就在你們心裡。<cite>路加福音十七章21節下</cite></div>
+<span class="rest">𝄾</span>
+<div class="hymn">
+  <p class="t"><span class="clef">𝄞</span>求主賜當說的話 <span class="en">Lord, Speak to Me, that I May Speak</span></p>
+  <p class="by">海弗格爾</p>
+  <p class="lyr">懇求教我聽主聲音，使我作主愛的迴響；<br>我願尋找迷路同胞，如主追尋淪落子民。</p>
+</div>
+<h3>地方教會</h3>
+<p>由一群基督徒所組成的會眾，知道他們乃是受神揀選來完成祂在地上的使命——成為心靈受傷之人「<span class="wv">屬靈的醫院</span>」——藉著神的話語與詩歌，清楚地傳達神的信息。</p>
+
+<div class="verse">凡勞苦擔重擔的人可以到我這裡來，我就使你們得安息。我心裡柔和謙卑，你們當負我的軛，學我的樣式；這樣，你們心裡就必得享安息。<cite>馬太福音十一章28～29節</cite></div>
+<div class="verse">沒有一種地上的痛苦是天上不能醫治的。<cite>湯瑪斯・摩爾（Thomas Moore）</cite></div>
+<h3>普世教會</h3>
+<p>歷世歷代、萬國萬民，所有受神「呼召」出來成為信徒、將來要與救主耶穌一同享受永生的神兒女。</p>
+<div class="verse">……我觀看，見有許多的人，沒有人能數過來，是從各國、各族、各民、各方來的，站在寶座和羔羊面前……。<cite>啟示錄七章9節</cite></div>
+<div class="verse">我們要歌唱讚美主名，賀祂為君王！<cite>愛德華・佩洛（Edward Perronet）</cite></div>
+
+<div class="verse">……陰間的權柄不能勝過他。<cite>馬太福音十六章18節</cite></div>
+<h2>教會的使命</h2>
+<p>聖經首次提到新約的教會，記載於使徒行傳二章41至47節。</p>
+<h3>地方教會存在的目的</h3>
+<h4><span class="l">A.</span>教會的弟兄姊妹<span class="ul">一起敬拜</span></h4>
+<p>會眾遵守神的教導、彼此團契、同心擘餅、禱告與讚美（42、46、47節）。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">B.</span>教會的弟兄姊妹<span class="ul">一起傳揚福音</span></h4>
+<p>彼得講完道，三千人深受感動，受洗並加入教會，神又將得救的人數天天加給他們（41、47節）。當時教會的領袖滿有神賜下的能力與屬靈權柄。信徒對教會的領袖心存敬畏，使徒也常常行出神蹟奇事（43節）。</p>
+<span class="rest">𝄾</span>
+
+<h4><span class="l">C.</span>教會的弟兄姊妹一起<span class="ul">學習神的真理</span></h4>
+<p>他們遵守使徒的教導（42節）。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">D.</span>教會的弟兄姊妹常有<span class="ul">團契</span></h4>
+<p>他們凡物共用，非常同心（44、46節）。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">E.</span>教會的弟兄姊妹一起<span class="ul">對外關懷</span></h4>
+<p>信徒與有需要的人分享（45節）。</p>
+<p>在五旬節之後，耶路撒冷教會將上述五個教會的使命付諸行動。今日的教會仍應遵行這些原則與使命。當教會忽略了這些聖經屬靈的教導、不關心拯救失喪的靈魂、教會的弟兄姊妹變得死氣沉沉時，<strong>神的兒女勢必要在自己的地方教會重新立志，實現神的託付與使命。</strong></p>
+
+<h3>不容忽視的重要事工</h3>
+<h4><span class="l">A.</span>信徒的敬拜</h4>
+<p>真實的敬拜會引領信徒進一步地認識，並且有效地宣揚神的價值。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">B.</span>對外傳福音</h4>
+<p>教會認真地傳福音，引導周圍未信者決志信主、歸入教會，並且進一步參與國外福音事工。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">C.</span>教導信徒</h4>
+<p>教會提供基督化教育，教導、培訓與供應各年齡信徒的屬靈需要。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">D.</span>提供眾信徒團契的機會</h4>
+<p>教會鼓勵信徒「肢體」在基督愛裡，彼此關懷與分享。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">E.</span>教會成為<span class="ul">神在地上的代表</span></h4>
+<p>如此，教會可向社會見證神關心人們整體的需要（詩篇八十二篇3～4節；路加福音四章18節）。</p>
+
+<h2>音樂與教會的使命</h2>
+<p>教會<span class="ul">音樂事工</span>的目的，就是要幫助教會<span class="ul">達成神的託付與使命</span>。教會每個音樂的組織、每一首詩歌的選擇，都可使用下面幾個原則來衡量。</p>
+<h3>衡量的原則</h3>
+<h4><span class="l">A.</span>音樂與敬拜</h4>
+<p><span class="ul">音樂提升我們對神的認知</span>。榮美與崇拜雖然是兩回事，但從我們對<span class="bx">美學</span><span class="arrow">⇄</span>與<span class="bx">屬靈事物</span>的回應來看，兩者之間卻有密切的關係。<span class="bx">聚會開始前的彈奏</span>、<span class="bx">會眾唱的詩歌</span>，以及<span class="bx">詩班和諧的頌讚</span>，能讓會眾<span class="wv">更深切地體會神的同在</span>。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">B.</span>傳福音與音樂</h4>
+<p><span class="ul">音樂幫助會眾預備心領受神的話語</span>。許多信徒都有被某一首詩歌<span class="ul">感動而信主</span>的經驗。教會歷史當中，每一次重要的<span class="ul">佈道運動</span>，都一定<span class="ul">帶來聖樂詩歌的復興</span>。</p>
+<span class="rest">𝄾</span>
+
+<h4><span class="l">C.</span>教導與音樂</h4>
+<p>音樂幫助我們學習屬靈真理。音樂與基督教教育有密切的關係。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">D.</span>團契與音樂</h4>
+<p><span class="ul">音樂使信徒同心合一</span>。一起頌讚，使原來的個體組合成為一整個群體——會眾、詩班。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">E.</span>社會關懷與音樂</h4>
+<p>音樂鼓勵愛心的行為。聖樂傳揚真理，能夠提升我們對社會的關懷，讓我們變得以人為中心，願意以實際行動來進行全人關懷。</p>
+<p class="mark"><span class="st">★</span>在此，我們要探討「聖樂」與「教會音樂」的區別。<span class="ul">聖樂</span>是一種<span class="ul">藝術形式</span>，在美學與藝術上都要求<span class="ul">高水準</span>的創作與演出。<span class="bx">教會音樂</span>則為一種<span class="ul">實用</span>的音樂，主要用在教會，<span class="wv">目的是為服事神</span>。在教會的音樂事工中，音樂不是為了本身——<span class="ul">乃為教會事工而存在</span>。教堂不是表演偉大音樂作品的音樂廳，教會的崇拜也不是讓人展現音樂才華的時刻。想反地，<span class="ul">音樂事工應該是教會為了</span><span class="bx ul">達成神的使命的一種有效工具</span><span class="st">★</span>。這並不是要提倡降低教會音樂的品質與演出水準，我們應該<span class="wv">向神獻上最好的讚美祭</span>，<span class="wv">不然就是對神的不敬</span>。<span class="st">★</span><span class="ul">評鑑教會音樂</span>要看音樂是否<span class="bx">讓會眾有機會榮耀神</span>、<span class="bx">教導神的子民</span>，與<span class="bx">完成神託付給教會的使命</span>。</p>
+
+<h2>成人詩班<sup>1</sup></h2>
+<div class="verse">恩賜原有分別，聖靈卻是一位。職事也有分別，主卻是一位。功用也有分別，神卻是一位，在眾人裡面運行一切的事……。就如身子是一個，卻有許多肢體；而且肢體雖多，仍是一個身子；基督也是這樣。<cite>哥林多前書十二章4～6、12節</cite></div>
+<p>神給每位信徒至少有一項屬靈恩賜，可以在教會服事，參與神給我們託付的使命（彼得前書四章10節）。每個<span class="bx ul">教會的牧長與同工要協助信徒認識與運用神所給的恩賜。</span></p>
+<p>新約聖經沒有提到音樂是信徒的一種屬靈恩賜，但無可否認地，音樂也是神給我們的恩賜，因為音樂能夠協助教會達成聖經裡提到的屬靈任務。教會的音樂事工中，對教會最有貢獻可能就是成人詩班。盼望教會的年輕人，以後繼續參加成人詩班。而成人詩班的成員，應該成為參與音樂服事的人當中最屬靈、忠心且最有音樂恩賜的人。</p>
+<p>優良的成人詩班（理想上，詩班成員應是教會聚會人數的十分之一）對教會的事工有很多的貢獻，因為：</p>
+<ul class="dots">
+  <li>詩班能超過一般會眾所能，對神獻上美好的祭。</li>
+  <li>崇拜中，詩班帶領會眾唱詩與朗誦經文，為整個崇拜立定氛圍，讓神的信息更加生動有力。</li>
+  <li>詩班坐在台上，為會眾設下專心聆聽講道的模範。</li>
+  <li>詩班為會眾設下崇拜應有的正確態度。「……你也可以知道在神的家中當怎樣行。這家就是永生神的教會，真理的柱石和根基。」（提摩太前書三章15節）</li>
+  <li><span class="ul">詩班代表新約聖經一項很重要的真理，萬民皆祭司</span>——平信徒積極參與崇拜與讚美神。</li>
+  <li>參與詩班的弟兄姊妹，因為扮演帶領崇拜的角色，就要特別注意自己的生活見證與型態。</li>
+  <li>詩班成員有機會在靈性上得以成長、彼此團契，且同心服事神。</li>
+</ul>
+<p>但是參加詩班不只是每週練練歌而已。詩班讓弟兄姊妹使用神所賜的恩賜一起建造基督的身體。詩班的成員與音樂同工<span class="ul">首先是神的僕人</span><span class="st">★</span>，其次才是<span class="ul">聖樂工作者</span>。參與教會的音樂服事不僅是榮幸，同時也是很莊嚴的責任啊！</p>
+<div class="verse">神差派祂的美歌者來到世上，帶來悲傷與歡樂的詩歌，讓他們得以觸動人們心懷，將它們再次帶回天家。<cite>朗費羅（Henry Wadsworth Longfellow）</cite></div>
+<div class="fn">
+  <p>1. 請參看本人著作 <i>Pocket Guide for the Church Choir Member</i>（Grand Rapids: Kregel Publications, 1984）. <i>Devotional Warm-Ups for the Church Choir</i>（Grand Rapids: Kregel Publications, 1985）.</p>
+</div>
+
+<h2>分級詩班<sup>2</sup></h2>
+<div class="verse">……讓小孩子到我這裡來，不要禁止他們；因為在神國的，正是這樣的人。<cite>馬可福音十章14節</cite></div>
+<p>教會最寶貴的資產就是兒童與青年，以聖經的真理教導、訓練年輕孩子走在神的正道上應該成為教會最優先的事工。主耶穌自己樹立了很好的榜樣，祂在繁忙中牧養眾人，仍撥出時間讓小孩子來到祂跟前。</p>
+<p>教會領袖一向都認同，<span class="ul">音樂是教導兒童聖經真理最有效的工具之一</span>，不少福音詩歌就是為了達成這個目的而寫的。現今的世俗音樂對年輕人有著莫大的影響力。<strong>如果能在教會整個教育系統中適當地使用音樂，音樂就足以成為教導兒童與青少年最好的方法與管道。</strong></p>
+<h3>分級詩班的目的<sup>3</sup></h3>
+<p>教會設立分級詩班，可以讓不同年齡的人都有參與音樂服事的機會。分級詩班包括：幼齡詩班（4～5歲的兒童）、初級詩班（小學一～三年級）、兒童詩班（四～六年級）。盼望教會至少有一半的兒童參加詩班。此外，教會也可設立青少年音樂戲劇團，讓年輕人可以參與歌唱、彈奏樂器與戲劇活動。教會提供給不同年齡孩子的音樂節目，對教會的基督教教育與青年事工很有幫助。</p>
+<div class="fn">
+  <p>2. 請參看本人著作 <i>My Music Workbook</i>（Grand Rapids: Kregel Publications, 1982）. <i>A Junior's Praise</i>（Grand Rapids: Kregel Publications, 1969）.</p>
+  <p>3. 請參看本人著作 <i>The Ministry of Music</i>（Grand Rapids: Kregel Publications, 1961）.</p>
+</div>
+
+<h3>分級詩班的好處</h3>
+<h4><span class="l">A.</span>讓教會音樂得以延續</h4>
+<p>如果教會希望詩班與信徒了解與欣賞教會音樂，最好是從幼年時就操練他們。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">B.</span>豐富孩子的生命</h4>
+<p>對多數的兒童與青少年而言，音樂是一種自然而滿足心靈的活動，一般兒童與青少年都會喜愛動聽的音樂，且能回應。</p>
+<span class="rest">𝄾</span>
+<h4><span class="l">C.</span>培養孩子屬靈的生命</h4>
+<p>委身於兒童音樂事工的老師，對孩童的一生會有重大的影響。老師會利用機會帶領孩童認識耶穌、讓孩童對崇拜的意義有些了解，預備將來參與教會的服事，並且向孩童見證基督徒團契的甘美。</p>
+
+<h2>綜論</h2>
+<p>不是每個人都具有音樂天賦，或唱歌特別動聽。雖然如此，教會應該給每一位信徒機會，以喜樂的歌聲回應神。沉默的基督徒往往會變得死氣沉沉。教會的音樂事工生動活躍，會為崇拜提升敬虔與歡欣的氛圍，也會間接地帶動整個教會，成為靈命健康的教會。</p>
+<div class="pull"><p><strong>讓神作神，<br>讓教會作教會，<br>讓神的子民歡欣喜樂！</strong></p></div>
+
+<h3>小組討論</h3>
+<ol class="q">
+  <li>基督徒對「教會」——包括個人、地方與普世教會——有屬靈與平衡的看法，為什麼是重要的？</li>
+  <li>教會是否可能參與一些有意義的活動，卻與使徒行傳二章41至47節所列五大原則毫不相關？</li>
+  <li>與大家分享你個人對音樂與教會屬靈目標之間的關係，提供教會用音樂以達成改進目標的建議。</li>
+  <li>你覺得，教會利用崇拜的時間舉辦音樂會——也就是說，獻詩純粹是讓人欣賞，可以嗎？你認為，教會應如何善用聖樂與聖樂的演出呢？</li>
+  <li>基督徒如何發掘自己的屬靈恩賜呢？</li>
+  <li>如何鼓勵年長的弟兄姊妹參加長青族詩班？</li>
+  <li>你覺得，貴教會在兒童與青少年的音樂事工上作得如何？為加強改進提供一些意見吧！</li>
+</ol>
+
+<h3>回應</h3>
+<div class="verse mark"><span class="st">★</span>教會不是一個藝術館，展覽一些傑出的基督徒；而是一個學校，用來教導一群不完美的基督徒。<cite>亨利・畢傑（Henry Ward Beecher）</cite></div>
+<div class="verse">有心服事神的人，首先要有隨時都願意參與服事的謙卑態度。<cite>無名</cite></div>
+<span class="rest">𝄾</span>
+<div class="hymn">
+  <p class="t"><span class="clef">𝄞</span>為世界頌主歌 <span class="en">Christ for the World We Sing</span></p>
+  <p class="by">山繆・沃爾科特（Samuel Wolcott，1813～1886）</p>
+  <p class="ref">請看《普天頌讚》第322首</p>
+    <ol>
+    <li>敬為世界頌主！敬引世界歸主，一片愛忱；困苦哀哭的人，軟弱負重的人，犯罪憂傷的人，主醫他們。</li>
+    <li>敬為世界頌主！敬引世界歸主，祈禱熱心；徘徊迷途的人，苦海中間浮沉，主高價贖他們，離暗投明。</li>
+    <li>敬為世界頌主！敬引世界歸主，一致同呼；大家分肩重擔，大家分當憂患，十架大家分擔，為主耶穌。</li>
+    <li>敬為世界頌主！敬引世界歸主，快樂歡呼；喚醒迷路眾靈，回頭歸向天程，受主靈感新生，屬主耶穌。阿們。</li>
+  </ol>
+</div>
+
+<section class="prayer">
+  <div class="staff">禱告</div>
+  <p class="noindent">親愛的父神，</p>
+  <p>謝謝祢，因為我們是祢普世教會的一員，與歷世歷代的信徒互相連結。</p>
+    <p>謝謝祢，讓我們能夠與信徒在自己的教會一起敬拜、服事祢。</p>
+  <p>求祢讓我們有一顆火熱的心，願意努力地完成祢永恆的目標——宣揚福音給萬民聽。</p>
+  <p>我們也為教會的青年感謝主，讓我們更多關心他們屬靈的生命。</p>
+  <p class="amen">禱告靠主聖名，阿們！</p>
+</section>
+
+
+</main>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeToggle');
+  function sysDark(){return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches}
+  function current(){var t=root.getAttribute('data-theme');return t||(sysDark()?'dark':'light')}
+  function apply(t){root.setAttribute('data-theme',t);root.classList.toggle('is-dark',t==='dark')}
+  var saved=null;try{saved=localStorage.getItem('endless-song-theme')}catch(e){}
+  if(saved==='dark'||saved==='light'){apply(saved)}else{root.classList.toggle('is-dark',current()==='dark')}
+  btn.addEventListener('click',function(){var t=current()==='dark'?'light':'dark';apply(t);try{localStorage.setItem('endless-song-theme',t)}catch(e){}});
+  if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(!root.getAttribute('data-theme'))root.classList.toggle('is-dark',sysDark())})}
+})();
+</script>
+</body>
+</html>

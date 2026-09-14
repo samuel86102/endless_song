@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>更美的詩歌｜無盡的歌 Chapter 13</title>
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+  :root{
+    --paper:#faf9f5; --paper-2:#f1efe8; --ink:#25262b; --ink-2:#5b5c63; --ink-3:#8f9099;
+    --rule:#dcdad2; --pen:#2d52c8; --pen-soft:rgba(45,82,200,.16); --accent:#6b5d3f;
+    --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+    --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    --latin:"Cormorant Garamond","Georgia",serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#1b1b1f; --paper-2:#232329; --ink:#e6e4dc; --ink-2:#aeacA4; --ink-3:#7c7b80;
+      --rule:#35353c; --pen:#7c98ff; --pen-soft:rgba(124,152,255,.2); --accent:#c9b98a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#1b1b1f; --paper-2:#232329; --ink:#e6e4dc; --ink-2:#aeaca4; --ink-3:#7c7b80;
+    --rule:#35353c; --pen:#7c98ff; --pen-soft:rgba(124,152,255,.2); --accent:#c9b98a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:2;padding-inline:16px;padding-block:0 96px;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+
+  /* running head, like the book's page header */
+  .runhead{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;margin-inline:-16px;padding-inline:16px;font-size:12px;color:var(--ink-3);letter-spacing:.08em}
+  .runhead .zh{font-family:var(--sans);font-weight:500}
+  .runhead a.home{text-decoration:none}
+  .runhead a.home:hover{color:var(--ink)}
+  .runhead .sep{margin-inline:4px}
+  @media (max-width:480px){.runhead .home .en,.runhead .sep{display:none}}
+  .runhead .en{font-family:var(--latin);font-size:14px;letter-spacing:.02em;font-style:italic}
+  .runhead .right{display:flex;align-items:center;gap:14px}
+  .theme{font:inherit;font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--rule);border-radius:999px;padding:4px 10px 4px 8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1.4}
+  .theme:hover{color:var(--ink);border-color:var(--ink-3)}
+  .theme:focus-visible{outline:2px solid var(--pen);outline-offset:2px}
+  .theme .ico::before{content:"☾"}
+  :root.is-dark .theme .ico::before{content:"☀"}
+  .theme .lbl::before{content:"深色"}
+  :root.is-dark .theme .lbl::before{content:"淺色"}
+  @media (max-width:480px){.runhead .right .zh{display:none}}
+
+  .book{max-width:38em;margin:0 auto;position:relative}
+
+  /* chapter opener */
+  .opener{padding-block:72px 48px;border-bottom:1px solid var(--rule);margin-bottom:40px}
+  .opener .chap{font-family:var(--latin);color:var(--ink-3);font-size:15px;letter-spacing:.2em;text-transform:uppercase}
+  .opener .chap b{font-size:34px;letter-spacing:0;font-weight:400;color:var(--ink);margin-left:6px;vertical-align:-3px}
+  .opener h1{font-family:var(--sans);font-weight:500;font-size:clamp(28px,6vw,40px);letter-spacing:.06em;margin:8px 0 6px;line-height:1.4;text-wrap:balance}
+  .opener .entitle{font-family:var(--latin);font-weight:400;font-size:clamp(30px,7.5vw,54px);line-height:1.05;margin:0 0 40px;letter-spacing:-.01em;text-wrap:balance}
+  .opener .entitle small{font-size:.5em;font-style:italic;margin-inline:.15em}
+  .epigraph{writing-mode:vertical-rl;margin-inline-start:auto;font-size:16px;line-height:2.4;height:15em;color:var(--ink-2);letter-spacing:.08em}
+  .epigraph b{color:var(--ink);font-weight:600}
+  .epigraph cite{font-style:normal;font-size:13px;color:var(--ink-3);margin-block-start:1.2em}
+  @media (max-width:480px){.epigraph{writing-mode:horizontal-tb;height:auto;line-height:2}.epigraph cite{display:block;text-align:right}}
+
+  /* legend for the reader's pen marks */
+  .legend{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;font-size:13px;color:var(--ink-2);font-family:var(--sans);margin:0 0 40px;padding:12px 16px;background:var(--paper-2);border-radius:4px}
+  .legend .k{color:var(--ink-3);letter-spacing:.1em;margin-right:4px}
+
+  /* headings, matching the book's three levels */
+  h2{font-family:var(--sans);font-weight:700;font-size:26px;letter-spacing:.06em;margin:72px 0 20px;line-height:1.4}
+  h3{font-family:var(--sans);font-weight:700;font-size:19px;letter-spacing:.04em;margin:44px 0 10px}
+  h4{font-family:var(--sans);font-weight:700;font-size:16px;margin:24px 0 4px}
+  h4 .l{font-family:var(--latin);font-weight:500;font-size:17px;margin-right:.3em}
+  p{margin:0 0 .6em;text-indent:2em}
+  p.noindent, .verse p, li p{text-indent:0}
+  strong{font-weight:700}
+  sup{font-size:.65em;font-family:var(--latin);vertical-align:.7em;line-height:0}
+
+  /* scripture & quotations: lighter weight, indented, like the book */
+  .verse{margin:28px 0 28px 2em;font-weight:300;color:var(--ink-2);letter-spacing:.05em;line-height:2.1}
+  .verse cite{display:block;text-align:right;font-style:normal;font-size:14px;color:var(--ink-3);margin-top:2px}
+  .verse cite::before{content:"—— "}
+  .pull{margin:32px 0;padding-left:1.2em;border-left:3px solid var(--accent);font-weight:400}
+  .pull p{text-indent:0}
+
+  /* section-rest ornament: the book uses an eighth rest between blocks */
+  .rest{display:block;text-align:center;color:var(--ink-3);font-size:22px;margin:22px 0;line-height:1;user-select:none}
+
+  /* hymn blocks */
+  .hymn{margin:36px 0;padding:20px 22px;border:1px solid var(--rule);border-radius:2px;background:var(--paper-2)}
+  .hymn .t{font-family:var(--sans);font-weight:700;font-size:17px;margin:0;text-indent:0;display:flex;flex-wrap:wrap;gap:0 10px;align-items:baseline}
+  .hymn .t .clef{font-size:30px;line-height:0;color:var(--accent);margin-right:2px;position:relative;top:4px}
+  .hymn .t .en{font-family:var(--latin);font-weight:500;font-size:19px}
+  .hymn .by{text-align:right;font-size:14px;color:var(--ink-3);margin:2px 0 14px;text-indent:0}
+  .hymn .lyr{margin:0;text-indent:0;font-weight:300;letter-spacing:.05em}
+  .hymn ol{margin:8px 0 0;padding-left:1.6em;font-weight:300;letter-spacing:.03em}
+  .hymn ol li{margin-bottom:.6em}
+  .hymn .ref{font-size:14px;color:var(--ink-3);margin:12px 0 0;text-indent:0}
+
+  ul.terms{list-style:none;padding:0;margin:16px 0 20px 2em;display:grid;grid-template-columns:repeat(auto-fit,minmax(9em,max-content));gap:0 3em;font-family:var(--sans);font-weight:500}
+  ul.terms li::before{content:"・";color:var(--ink-3)}
+  ul.dots{padding-left:1.4em;margin:12px 0}
+  ul.dots li{margin-bottom:.35em;padding-left:.2em}
+  ul.dots li::marker{color:var(--ink-3)}
+  ol.q{padding-left:1.8em;margin:12px 0}
+  ol.q li{margin-bottom:.5em}
+  ol.q li::marker{font-family:var(--latin);color:var(--ink-3)}
+
+  .fn{margin:36px 0 0;padding-top:12px;border-top:1px solid var(--rule);font-size:13px;line-height:1.8;color:var(--ink-2)}
+  .fn p{text-indent:0;margin:0 0 4px}
+  .fn i{font-family:var(--latin);font-size:15px}
+
+  .prayer{margin:48px 0 0;padding:28px 0 0;border-top:1px solid var(--rule)}
+  .prayer .staff{display:flex;align-items:center;gap:14px;font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:.3em;margin-bottom:22px}
+  .prayer .staff::before{content:"";flex:1;max-width:14em;height:11px;background:repeating-linear-gradient(to bottom,var(--ink-3) 0 1px,transparent 1px 3.5px)}
+  .prayer p{font-weight:300;letter-spacing:.06em;line-height:2.2}
+  .prayer p.amen{text-align:right;text-indent:0;margin-top:1em}
+
+  /* ===== reader's blue-pen marks ===== */
+  .ul{text-decoration:underline;text-decoration-color:var(--pen);text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-skip-ink:none}
+  .wv{text-decoration:underline wavy;text-decoration-color:var(--pen);text-decoration-thickness:1.5px;text-underline-offset:4px;text-decoration-skip-ink:none}
+  .bx{color:var(--ink);background:var(--pen-soft);border-radius:2px;padding:1px 2px;box-shadow:inset 1.5px 0 var(--pen),inset -1.5px 0 var(--pen)}
+  .bx.ul{text-decoration-thickness:1.5px}
+  .st{color:var(--pen);font-size:.85em;margin-inline:.1em;vertical-align:.1em}
+  .arrow{color:var(--pen);font-weight:700;margin-inline:.05em;font-family:var(--sans)}
+  .mark{position:relative}
+  .mark .st{position:absolute;right:calc(100% + 6px);top:0}
+  @media (max-width:64em){.mark .st{position:static}}
+  .leg .ul,.leg .wv,.leg .bx{color:var(--ink)}
+
+
+  /* chapter-specific additions */
+  dl.roles{margin:12px 0 12px 2em}
+  dl.roles dt{font-family:var(--sans);font-weight:700;display:inline}
+  dl.roles dt::after{content:"："}
+  dl.roles dd{display:inline;margin:0}
+  dl.roles dd::after{content:"";display:block;height:.4em}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:1.3em;height:1.3em;border:1.5px solid var(--pen);border-radius:50%;color:var(--pen);font-family:var(--latin);font-size:.7em;vertical-align:.5em;margin-right:.15em;line-height:1}
+  li.circled::marker{color:var(--pen);font-weight:700}
+  .stages{position:relative;border-left:2px solid var(--pen);padding-left:1.6em;margin-left:.6em}
+  .stages li::marker{color:var(--pen)}
+  ol.toc{columns:2;column-gap:2em;margin-left:2em}
+  ol.toc li{break-inside:avoid;margin-bottom:.15em}
+  .survey h3{margin-top:52px}
+  ol.qq{padding-left:0;margin:8px 0 0 .5em;list-style:none;counter-reset:qq}
+  ol.qq>li{counter-increment:qq;font-family:var(--sans);font-weight:700;margin-bottom:.6em;padding-left:2.4em;position:relative}
+  ol.qq>li::before{content:"（" counter(qq) "）";position:absolute;left:0;font-weight:700}
+  ol.qq ul{list-style:none;padding-left:.6em;margin:.3em 0 0;font-family:var(--serif);font-weight:400}
+  ol.qq ul li{margin-bottom:.2em}
+  ol.qq ul li::before{content:"・";color:var(--ink-3);margin-right:.1em}
+  ol.qq .sub{font-family:var(--serif);font-weight:400;padding-left:.6em}
+  .bl{display:inline-block;min-width:8em;flex:1;border-bottom:1px solid var(--ink-3);height:1.2em;vertical-align:baseline;margin-left:.3em;width:calc(100% - 22em);max-width:100%}
+  .bl.short{width:6em;min-width:6em}
+  .bl.full{display:block;width:100%;margin:.5em 0 0}
+  @media (max-width:480px){.bl{width:100%;margin-top:.2em}}
+
+</style>
+</head>
+<body>
+<header class="runhead">
+  <a class="zh home" href="index.html">← 目錄 <span class="sep">·</span> 無盡的歌 <span class="en">The Endless Song</span></a>
+  <span class="right"><span class="zh">Chapter 13 · 更美的詩歌</span>
+  <button id="themeToggle" class="theme" type="button" aria-label="切換深淺色模式"><span class="ico"></span><span class="lbl"></span></button></span>
+</header>
+
+<main class="book">
+<section class="opener">
+  <div class="chap">Chapter <b>13</b></div>
+  <h1>更美的詩歌——評估與設定目標</h1>
+  <p class="entitle noindent">The <span style="font-size:1.35em">Song</span> Improved:<br>evaluating <small>and</small> setting <span style="font-size:1.35em">goals</span></p>
+  <div class="epigraph">……我只有一件事，就是忘記背後，努力面前的，向著標竿直跑，要得神在基督耶穌裡從上面召我來得的獎賞。所以我們中間，凡是完全人總要存這樣的心；若在什麼事上存別樣的心，神也必以此指示你們。然而，我們到了什麼地步，就當照著什麼地步行。<cite>——腓立比書三章13～16節</cite></div>
+</section>
+
+<div class="legend leg">
+  <span class="k">藍筆記號</span>
+  <span><span class="ul">底線</span></span>
+  <span><span class="bx">括弧框起</span></span>
+  <span class="k" style="margin-left:auto">空白線為原書留給讀者填寫的欄位</span>
+</div>
+
+<h3 style="margin-top:0">不斷地求進步</h3>
+<p>教會裡的每位弟兄姊妹都要不斷地力求進步。不能只是請一位專職的音樂同工，讓他一人唱獨角戲，而大家卻袖手旁觀。<span class="bx">每個會眾都有責任，要積極地參與評估及提升教會音樂的事工。</span></p>
+<p>在教會音樂事工上，特別需要弟兄姊妹親自地參與。一般教會大都讓牧師、音樂主任或音樂委員會的同工決定教會的音樂事工。教會的音樂事工要顧及每一位會眾，不論年齡大小、文化背景或音樂恩賜高低等的需要。教會如果要讓肢體在靈裡得以長進，就必須鼓勵每一位成員都參與崇拜，並以唱詩、讚美回應神。</p>
+
+<h2>進步的基本要素</h2>
+<p>教會音樂事工進步的要素有下面幾項：</p>
+<ol class="q">
+  <li>教會整體都要認同音樂事工的重要性。通常，一個靈命成長、人數不斷增加的教會，其音樂事工都會<span class="ul">顧及每個年齡層會眾的需要</span>。</li>
+  <li>教會不論大小，都可以發展一套合宜的音樂事工，但前提是弟兄姊妹要願意禱告、策劃，並參與服事。</li>
+  <li>規劃音樂事工，不能只讓特別有音樂恩賜的會眾參與。教會的音樂事工要<span class="ul">顧及每一位弟兄姊妹屬靈上的需要</span>。</li>
+  <li>沒有一間教會可以自稱他們的音樂服事「已達完全」，總還會有些需要改進之處。活潑、成長中的教會，對教會的未來都會有異象的（箴言二十九章18節）。</li>
+  <li>要鼓勵弟兄姊妹表達對於音樂事工的感想，提供積極、建設性的改進意見。如果會眾對音樂事工有負面的看法，而教會忽略他們的心聲，可能會帶來不良的後果。</li>
+  <li>領敬拜要顧及弟兄姊妹的意願與靈裡的需要，敬拜同工不要以自己喜愛的方式帶領。</li>
+</ol>
+
+<h2>精進的十大項目</h2>
+<p>學完前面十二課，也從聖經、歷史與哲學思想等方面，建立了教會音樂與敬拜的概念，現在是我們該評估自己教會音樂事工的時候了！我們的目標是盼望能在短時間內獲得改進，不過也要設立長程的目標，作為努力的方向。音樂事工需要評估與設定目標的有下面十項：</p>
+<ol class="q toc">
+  <li>行政管理</li>
+  <li>會眾的唱詩</li>
+  <li>分級詩班——兒童詩班</li>
+  <li>青少年詩班</li>
+  <li>成人詩班</li>
+  <li>器樂</li>
+  <li>家庭中的敬拜</li>
+  <li>鼓勵個人創作</li>
+  <li>培養伴奏與司琴人才</li>
+  <li>將平信徒培養成敬拜主領</li>
+</ol>
+<p>以下針對上述十大領域列出一些問題，讓各位評估教會的音樂事工。評估與設定目標的整個過程，應以愛心包容、互相扶持的心態進行。批評應該都是善意的，而不是為了要傷害或低估音樂同工或事工。面對教會的音樂事工，總要帶著<span class="ul">謙卑</span>、<span class="ul">僕人心志</span>來服事（腓立比書二章1～5節）。</p>
+
+<div class="survey">
+
+<h3>1. 行政管理</h3>
+<ol class="qq">
+  <li>教會有音樂主任或音樂牧師嗎？<span class="bl"></span>
+    <ul><li>是全職，還是半職？<span class="bl"></span></li><li>受薪還是義工？<span class="bl"></span></li><li>要兼做教會其他的事工嗎？<span class="bl"></span></li></ul></li>
+  <li>教會有音樂事工委員會嗎？<span class="bl"></span>
+    <ul><li>人數是多少？<span class="bl"></span></li><li>委員是經過挑選或指派的？<span class="bl"></span></li><li>多久開一次會？<span class="bl"></span></li><li>委員會接受會眾的建議嗎？<span class="bl"></span></li><li>委員會對教會的音樂事工有直接的貢獻嗎？<span class="bl"></span></li></ul></li>
+  <li>教會的音樂事工有足夠的經費嗎？<span class="bl"></span>
+    <ul><li>每年的預算有多少？<span class="bl"></span></li><li>經費包括給特別獻詩、司琴的謝禮嗎？<span class="bl"></span></li><li>經費包括樂器的調音與修理費用嗎？<span class="bl"></span></li><li>經費包括詩袍的乾洗與修補費用嗎？<span class="bl"></span></li></ul></li>
+  <li>牧師、音樂主任、教會長執與音樂事工委員會固定開會，討論教會的音樂事工嗎？<span class="bl"></span><div class="sub">會中有討論、設定主日崇拜與特別聚會的長程計畫嗎？<span class="bl"></span></div></li>
+  <li>同工是否以成熟、富創意和熱忱的態度，來帶領主日崇拜？<span class="bl"></span><div class="sub">主日崇拜是否鼓勵弟兄姊妹作主門徒？<span class="bl"></span></div></li>
+  <li>教會事工是否強調傳福音的重要性？<span class="bl"></span><div class="sub">教會是否向社區中的未信者傳福音？<span class="bl"></span></div></li>
+  <li>教會是否使用每一位有音樂恩賜的弟兄姊妹？<span class="bl"></span></li>
+  <li>教會是否清楚地列出：
+    <ul><li>崇拜時可以使用的音樂風格？<span class="bl"></span></li><li>在崇拜獻詩或其他演出者個人的屬靈條件？<span class="bl"></span></li><li>使用錄音伴奏、附加擴音器的樂器、舞蹈等的規定？<span class="bl"></span></li><li>講台的布置與領敬拜者的服裝？<span class="bl"></span></li><li>給參與獻詩或其他演出者的謝禮？<span class="bl"></span></li></ul></li>
+  <li>教會音樂事工有哪些需要立刻改進之處？<span class="bl"></span></li>
+  <li>列出教會音樂事工的長程規劃：<span class="bl"></span></li>
+</ol>
+
+<h3>2. 會眾的唱詩</h3>
+<ol class="qq">
+  <li>教會的會眾唱詩還令人滿意嗎？<span class="bl"></span>
+    <ul>
+      <li>哪些地方需要改進？<span class="bl"></span></li>
+      <li>詩歌本的名稱：<span class="bl"></span><br>出版公司：<span class="bl short"></span> 出版日期：<span class="bl short"></span></li>
+      <li>這本詩歌本教會使用多久了？<span class="bl"></span></li>
+      <li>對這本詩歌本滿意嗎？<span class="bl"></span></li>
+      <li>教會嘗試過「每月一首聖詩」的活動嗎？<span class="bl"></span></li>
+      <li>常學新的詩歌嗎？<span class="bl"></span></li>
+      <li>教會提供熟悉詩歌的簡介嗎？<span class="bl"></span></li>
+      <li>教會是否嘗試唱會眾所寫的詩歌？<span class="bl"></span></li>
+      <li>會眾唱詩通常用什麼樂器伴奏？效果如何？<span class="bl"></span></li>
+      <li>如果用風琴伴奏，用的是什麼類型的風琴（管風琴、電子琴）？<span class="bl"></span></li>
+      <li>如果用鋼琴伴奏，鋼琴的大小？琴夠不夠大呢？<span class="bl"></span></li>
+      <li>樂器有沒有定期調音呢？<span class="bl"></span></li>
+      <li>教會的音響如何呢？有需要改進之處嗎？<span class="bl"></span></li>
+    </ul></li>
+  <li>會眾的唱詩有哪些需要立刻改進之處？<span class="bl"></span></li>
+  <li>列出改善會眾唱詩的長程規劃：<span class="bl"></span></li>
+</ol>
+
+<h3>3. 分級詩班——兒童詩班</h3>
+<ol class="qq">
+  <li>教會的兒童與青少年的音樂事工還令人滿意嗎？<span class="bl"></span>
+    <ul>
+      <li>他們在主日學都唱哪一類的詩歌呢？<span class="bl"></span></li>
+      <li>教會有兒童詩班嗎？<span class="bl"></span></li>
+      <li>是幾歲的孩子、人數分別有多少？<span class="bl"></span></li>
+      <li>參加兒童詩班的人數總共有多少？<span class="bl"></span></li>
+      <li>佔主日學人數的百分比多少？<span class="bl"></span></li>
+      <li>孩子們喜歡參加詩班嗎？<span class="bl"></span></li>
+      <li>他們在每週的哪一天練習？<span class="bl"></span></li>
+      <li>多數家長覺得練習時間方便嗎？<span class="bl"></span></li>
+      <li>上台之前，練習的時候有使用相關教材（作業本、筆記、研讀聖詩）嗎？<span class="bl"></span></li>
+      <li>預備定期的獻詩嗎？<span class="bl"></span></li>
+      <li>詩班安排一些團契、輕鬆的活動嗎？<span class="bl"></span></li>
+      <li>詩班每年有參與特別的獻詩或演唱會嗎？<span class="bl"></span></li>
+      <li>詩班有足夠的同工（指揮、伴奏、詩班媽媽與輔導等）一起配搭服事嗎？<span class="bl"></span></li>
+      <li>有合宜的練習場地（教室、椅子、燈光、空調、鋼琴、黑板、公布欄、音響設備、敲擊樂器等）嗎？<span class="bl"></span></li>
+    </ul></li>
+  <li>兒童詩班有哪些需要立刻改進之處？<span class="bl"></span></li>
+  <li>列出改善兒童詩班的長程規劃：<span class="bl"></span></li>
+</ol>
+
+<h3>4. 青少年詩班</h3>
+<ol class="qq">
+  <li>教會的青少年詩班還令人滿意嗎？<span class="bl"></span>
+    <ul>
+      <li>參加青少年詩班的年齡？<span class="bl"></span></li>
+      <li>參加青少年詩班的人數總共有多少？<span class="bl"></span></li>
+      <li>佔主日學人數的百分比有多少？<span class="bl"></span></li>
+      <li>青少年喜歡參加詩班嗎？<span class="bl"></span></li>
+      <li>他們在每週中的哪一天練習？<span class="bl"></span></li>
+      <li>多數的家長和青少年覺得練習時間方便嗎？<span class="bl"></span></li>
+      <li>青少年有機會參與主日崇拜的服事嗎？<span class="bl"></span></li>
+      <li>詩班每年有參與特別的獻詩或演唱會嗎？<span class="bl"></span></li>
+      <li>詩班有機會出外用音樂與戲劇傳福音嗎？<span class="bl"></span></li>
+      <li>詩班有足夠的同工（指揮、伴奏與輔導）一起配搭服事嗎？<span class="bl"></span></li>
+      <li>有合宜的詩班練習場地嗎？<span class="bl"></span></li>
+      <li>是否鼓勵特別有音樂恩賜的青少年，或將他們組成小詩班？<span class="bl"></span></li>
+    </ul></li>
+  <li>青少年詩班有哪些需要立刻改進之處？<span class="bl"></span></li>
+  <li>列出改善青少年詩班長程的規劃：<span class="bl"></span></li>
+</ol>
+
+<h3>5. 成人詩班</h3>
+<ol class="qq">
+  <li>教會有成人詩班嗎？<span class="bl"></span>
+    <ul>
+      <li>人數有多少？<span class="bl"></span></li>
+      <li>佔教會人數的百分比有多少？<span class="bl"></span></li>
+      <li>在主日崇拜獻詩的頻率是多久一次？<span class="bl"></span></li>
+      <li>成人詩班的服事還令人滿意嗎？<span class="bl"></span></li>
+      <li>成人詩班唱的主要是哪些類別的詩歌？<span class="bl"></span>（合唱曲、聖詩與福音詩歌改編曲、當代詩歌，選自詩本的聖詩，平衡運用嗎？）</li>
+      <li>他們在每週中的哪一天練習呢？<span class="bl"></span></li>
+      <li>多數人覺得練習時間方便嗎？<span class="bl"></span></li>
+      <li>練唱時有沒有包含一段靈修時間，以提升成員的靈命呢？<span class="bl"></span></li>
+      <li>參加成人詩班有什麼條件？<span class="bl"></span></li>
+      <li>對詩班成員的要求是否標示在章程上？<span class="bl"></span></li>
+      <li>詩班每年有參與特別的獻詩或演唱會嗎？<span class="bl"></span></li>
+      <li>他們有機會出外用音樂傳福音嗎？<span class="bl"></span></li>
+      <li>詩班圖書館整理得井然有序嗎？<span class="bl"></span></li>
+      <li>詩袍是否妥善保管（掛得整齊、清洗、修補）？<span class="bl"></span></li>
+      <li>詩班成員喜歡參加詩班的服事嗎？<span class="bl"></span></li>
+    </ul></li>
+  <li>詩班在崇拜時是否有效地帶領會眾敬拜？<span class="bl"></span></li>
+  <li>詩班有足夠的同工（指揮、伴奏、其他同工）一起配搭服事嗎？<span class="bl"></span></li>
+  <li>成人詩班有哪些需要立刻改進之處？<span class="bl"></span></li>
+  <li>列出改善成人詩班的長程規劃：<span class="bl"></span></li>
+</ol>
+
+<h3>6. 器樂</h3>
+<ol class="qq">
+  <li>教會有樂團嗎？<span class="bl"></span>
+    <ul>
+      <li>哪一種樂團？<span class="bl"></span></li>
+      <li>人數多少？<span class="bl"></span></li>
+      <li>參加樂團的年齡？<span class="bl"></span></li>
+      <li>樂團在教會演出的頻率是多久一次？<span class="bl"></span></li>
+      <li>他們在每週中的哪一天練習呢？<span class="bl"></span></li>
+      <li>多數人覺得練習時間方便嗎？<span class="bl"></span></li>
+      <li>有合宜的練習場地嗎？（教室、鋼琴、儲藏室等）<span class="bl"></span></li>
+      <li>教會有手鐘（handbell）團嗎？<span class="bl"></span></li>
+      <li>參加手鐘團的年齡？<span class="bl"></span></li>
+      <li>手鐘團的服事有功效嗎？<span class="bl"></span></li>
+    </ul></li>
+  <li>樂團有稱職的指揮嗎？<span class="bl"></span></li>
+  <li>樂團有哪些需要立刻改進之處？<span class="bl"></span></li>
+  <li>列出改善樂團的長程規劃：<span class="bl"></span></li>
+</ol>
+
+<h3>7. 家庭中的敬拜</h3>
+<p class="noindent" style="margin-left:2em">教會是否提供會眾在家裡唱詩的教導，或提供家庭敬拜所需的工具（家庭祭壇，或是敬拜流程）？<span class="bl"></span><span class="bl full"></span><span class="bl full"></span></p>
+
+<h3>8. 鼓勵個人創作</h3>
+<p class="noindent" style="margin-left:2em">教會是否提供機會或鼓勵弟兄姊妹創作？（例如寫作、寫小說故事、詩歌、製作旗幟，或聖詩編曲）<span class="bl"></span><span class="bl full"></span><span class="bl full"></span></p>
+
+<h3>9. 培養伴奏與司琴人才</h3>
+<p class="noindent" style="margin-left:2em">教會是否有計畫地培養伴奏、管風琴與司琴人才，與其他有音樂恩賜的弟兄姊妹，並讓他們在崇拜時服事呢？<span class="bl"></span><span class="bl full"></span><span class="bl full"></span></p>
+
+<h3>10. 將平信徒培養成敬拜主領</h3>
+<ol class="qq">
+  <li>教會是否有計畫地將平信徒培養成敬拜主領？<span class="bl"></span></li>
+  <li>受過訓練的同工是否能有機會在崇拜時主領敬拜呢？<span class="bl"></span></li>
+  <li>培養領詩同工有哪些需要立刻改進之處？<span class="bl"></span></li>
+  <li>列出改進培養領詩同工的長程規劃：<span class="bl"></span></li>
+</ol>
+
+</div>
+
+<h2>綜論</h2>
+<p>教會是神揀選的子民，要來完成祂在地上的使命。如果教會要達成神所交託給我們的使命，每一位弟兄姊妹都要為這些使命禱告，並全力以赴。</p>
+<p>因基督的緣故，讓我們重新對教會忠心地擺上，並宣告：</p>
+<div class="pull"><p><strong>得勝的教會啊！讓我們繼續歌唱！從現在直到永恆！</strong></p></div>
+<div class="verse">你們要讚美耶和華！耶和華的僕人哪，你們要讚美，讚美耶和華的名！耶和華的名是應當稱頌的，從今時直到永遠！從日出之地到日落之處，耶和華的名是應當讚美的！<cite>詩篇一百十三篇1～3節</cite></div>
+
+<h3>回應</h3>
+<div class="verse">我們的內心總有期盼、渴慕比目前更好、更高貴、聖潔的時刻。<cite>亨利・畢傑（Henry Ward Beecher）</cite></div>
+<div class="verse">神沒有從天上送個教會下來，教會要從我們內心崛起。<cite>無名</cite></div>
+<div class="verse">神用平凡的人成就非凡的大事。<cite>無名</cite></div>
+<span class="rest">𝄾</span>
+<div class="hymn">
+  <p class="t"><span class="clef">𝄞</span>基督精兵 <span class="en">Onward, Christian Soldiers</span></p>
+  <p class="by">巴林古（Sabrine Baring-Gould，1834～1924）</p>
+  <p class="lyr">見此得勝旗號，撒但軍逃遁；<br>凡屬基督精兵，齊步向前進。<br>一聽頌讚歌聲，地獄皆震驚；<br>弟兄高聲歌唱，頌讚主無盡。<br>基督精兵前進，齊向戰場走；<br>耶穌是我元帥，引導在前頭。</p>
+</div>
+
+<section class="prayer">
+  <div class="staff">禱告</div>
+  <p class="noindent">感謝神，</p>
+  <p class="noindent">謝謝祢賜給我們音樂。</p>
+  <p>我們為祢給弟兄姊妹諸般的屬靈恩賜感謝祢，讓我們明白恩賜雖有不同，但我們在祢裡面是合一的。</p>
+  <p>讓我們願意多多使用我們的恩賜，殷勤地在教會服事祢。</p>
+  <p>讓會眾的讚美與敬拜都能榮耀祢的名。</p>
+  <p class="amen">禱告靠主聖名，阿們！</p>
+</section>
+
+</main>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeToggle');
+  function sysDark(){return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches}
+  function current(){var t=root.getAttribute('data-theme');return t||(sysDark()?'dark':'light')}
+  function apply(t){root.setAttribute('data-theme',t);root.classList.toggle('is-dark',t==='dark')}
+  var saved=null;try{saved=localStorage.getItem('endless-song-theme')}catch(e){}
+  if(saved==='dark'||saved==='light'){apply(saved)}else{root.classList.toggle('is-dark',current()==='dark')}
+  btn.addEventListener('click',function(){var t=current()==='dark'?'light':'dark';apply(t);try{localStorage.setItem('endless-song-theme',t)}catch(e){}});
+  if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(!root.getAttribute('data-theme'))root.classList.toggle('is-dark',sysDark())})}
+})();
+</script>
+</body>
+</html>
