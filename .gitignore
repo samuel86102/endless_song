@@ -3,3 +3,6 @@
 *.jpeg
 *.png
 *.heic
+
+# 封面用於 og:image，例外保留
+!cover.jpg
